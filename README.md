@@ -8,6 +8,12 @@ Currently only GET requests can be bruteforced but this can be changed by modify
 ![alt text](https://i.imgur.com/5orefhi.png "yes")
 
 *Bit.ly Bruteforcer Example*
+
+# Installation
+```
+npm install bitfire
+```
+
 # Usage
 ```js
 var bitfire = require("bitfire");
