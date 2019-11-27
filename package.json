@@ -1,0 +1,24 @@
+{
+  "name": "bitfire",
+  "version": "1.0.0",
+  "description": "Simple API Bruteforcing using Proxy lists.",
+  "main": "bitfire.js",
+  "directories": {
+    "example": "example"
+  },
+  "dependencies": {
+    "request": "^2.88.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "api",
+    "bruteforcing",
+    "request",
+    "proxy"
+  ],
+  "author": "domenicw1",
+  "license": "ISC"
+}
