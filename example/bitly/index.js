@@ -1,5 +1,5 @@
 // EXAMPLE CODE
-var bitfire = require("../../bitfire.js");
+var bitfire = require("bitfire");
 var readline = require('readline');
 var fs = require('fs');
 
@@ -24,17 +24,16 @@ function genrnd(n) {
 	}
 }
 function generateCode(){
-	nf = "http://bit.ly/" + genrnd(4);
+	nf = "https://discordapp.com/api/v6/invites/" + genrnd(3) +"?with_counts=true";
 	return nf;
 }
 
 // BEGIN BRUTE
-bitfire.proxyBrute(generateCode,proxys,50,function(error,response,body,code){
+bitfire.proxyBrute(function(){return "http://bit.ly/" + bitfire.rndStr(bitfire.lowerCaseChars,6)},proxys,30,function(error,response,body,code){
  // console.log(error,response,body,code)
  try{
- if(!body.includes("404 Not Found") && !body.includes("potentially problematic") && !body.includes("This is a 404 error")){
-	 console.log("Found Code: " + code)
-	// process.exit(0);
+ if(response.statusCode == 200){
+	 console.log("Found Invite: " + code)
  }
  }catch{}
 })
