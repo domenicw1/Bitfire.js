@@ -2,7 +2,23 @@
 var request = require('request');
 var readline = require('readline');
 var fs = require('fs');
+module.exports.lowerCaseChars = "abcdefghijklmnopqrstuvwxyz"
+module.exports.upperCaseChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+module.exports.mixedCaseChars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+module.exports.charsNum = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"
+module.exports.lowCharsNum = "abcdefghijklmnopqrstuvwxyz1234567890"
+module.exports.upCharsNum = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"
 
+module.exports.rndStr = function(e,n){
+	   var result = '';
+	   
+    for (var i = 0; i < n; i++) {
+        result += e.charAt(Math.floor(Math.random() * e.length));
+    }
+
+    return result;
+	
+}
 module.exports.proxyBrute = function(generateCode,proxyArray,interval,callback){
 	var _i = 0;
 	
