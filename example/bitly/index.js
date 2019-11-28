@@ -1,4 +1,4 @@
-var bitfire = require("bitfire");
+var bitfire = require("../../bitfire.js");
 var readline = require('readline');
 var fs = require('fs');
 
