@@ -18,7 +18,7 @@ npm install bitfire
 ```js
 var bitfire = require("bitfire");
 function generateCode(){
-var nf = "http://example.org/api/giftcodes/check/" + getRandomCode();
+var nf = "http://example.org/api/giftcodes/check/" + bitfire.rndStr(bitfire.charsNum,6);
 return nf;
 }
 var proxyArray = ["123.293.192:8000","942.323.234.122:8080"];
@@ -29,5 +29,22 @@ process.exit(0);
 }
 })
 ```
+Bruteforce API
 
 **bitfire.proxyBrute(function to generate api url to check, array of proxys, interval between requests, callback)**
+
+
+Generate Random String
+
+**bitfire.rndStr(string with allowed characters, length)**
+
+Included character sets for rndStr
+
+```
+bitfire.lowerCaseChars = "abcdefghijklmnopqrstuvwxyz"
+bitfire.upperCaseChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+bitfire.mixedCaseChars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+bitfire.charsNum = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"
+bitfire.lowCharsNum = "abcdefghijklmnopqrstuvwxyz1234567890"
+bitfire.upCharsNum = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"
+```
