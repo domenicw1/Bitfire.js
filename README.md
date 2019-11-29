@@ -15,7 +15,7 @@ npm install bitfire
 ```
 # Installation (NPM, With TypeScript support)
 ```
-npm install domenicw1/bitfire
+npm install domenicw1/bitfire.js
 ```
 
 # Installation (Yarn, Without TypeScript support)
@@ -24,7 +24,7 @@ yarn add bitfire
 ```
 # Installation (NPM, With TypeScript support)
 ```
-yarn add domenicw1/bitfire
+yarn add domenicw1/bitfire.js
 ```
 
 # Usage
