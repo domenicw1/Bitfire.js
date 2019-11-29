@@ -9,9 +9,22 @@ Currently only GET requests can be bruteforced but this can be changed by modify
 
 *Bit.ly Bruteforcer Example*
 
-# Installation
+# Installation (NPM, Without TypeScript support)
 ```
 npm install bitfire
+```
+# Installation (NPM, With TypeScript support)
+```
+npm install domenicw1/bitfire
+```
+
+# Installation (Yarn, Without TypeScript support)
+```
+yarn add bitfire
+```
+# Installation (NPM, With TypeScript support)
+```
+yarn add domenicw1/bitfire
 ```
 
 # Usage
